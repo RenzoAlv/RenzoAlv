@@ -1,0 +1,322 @@
+
+/* *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}*/ 
+
+html{
+    font-size: 62.5%;
+}
+body{
+    background-image: linear-gradient(#FC5C7D,#6A82FB);
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-transform: capitalize;
+    font-size: 3rem;
+    
+}
+ul{color: pink;
+    font-size: 2rem;
+
+}
+a{color: pink;}
+img{
+    width: 550px;
+}
+.logoPrincipal{
+    border-radius: 40px;
+    display: block;
+    margin: auto;
+}
+
+/*header*/
+.menuPrincipal{
+    font-size: 3rem;
+    text-align: center;
+    list-style: none;
+    
+}
+.menuPrincipal a{
+    text-decoration: none;
+}
+.menuPrincipal a:hover{
+    color: black;
+    font-size: 3rem;
+}
+
+.menuPrincipal li{
+    display: inline-block;
+    position: relative;
+    padding: 0 10px;
+    color: black;
+
+}
+.menuPrincipal ul{
+    position:absolute;
+    display: none;
+}
+.menuPrincipal ul li{
+    display: block;
+    background-color: purple;
+}
+.menuPrincipal li:hover ul{
+    display: block;
+}
+.gridBody{
+    display: grid;
+    grid-template-columns: 2, 2fr;
+    grid-template-rows: 4, 2fr;
+    grid-template-areas: 
+    "encabezado encabezado"
+    "titulo titulo"
+    "inicio inicio "
+    "pie pie";
+}
+.header{
+    grid-area: encabezado;
+}
+.header h1{
+    text-align: center;
+    color: crimson;
+}
+main{
+    grid-area: inicio;
+
+}
+footer{
+    grid-area: pie;
+    display: grid;
+    grid-template-columns: 3, 2fr;
+    grid-template-areas: 
+    "paginas datos mapa";
+    justify-items: stretch;
+    align-items: stretch;
+
+}
+
+/*ALVARADO.HTML*/
+
+header{
+    /*position: sticky;*/
+    
+    top: 0;
+}
+.meryDulces{
+    font-size: 6rem;
+    color: pink;
+    text-align: center;
+    grid-area: titulo;
+}
+
+
+.otrasImagenes{
+    width: 550px;
+}
+
+
+
+/*main*/
+main{text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows:repeat(1, 1fr);
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+
+/*section*/
+
+
+/*footer*/
+#footervioleta{color: pink;
+    clear: both;
+    padding: 100px 0;
+    height: 500px;
+    /*display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;*/
+    
+
+
+}
+.navNav{
+    height: 250px;
+    padding: 50px;
+    /*display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items:center;*/
+}
+
+.menuNav{
+    grid-area: paginas;
+}
+.datosNav{
+    grid-area: datos;
+}
+.mapaNav{
+    grid-area: mapa;
+    
+}
+
+
+
+
+
+/*PRODUCTOS.HTML*/
+
+tr{color: rgba(255, 105, 180, 0.63);}
+
+
+/* ACERCA DE*/
+.letraMenuacercade{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.letraMenuacercade p{
+    font-size: 2rem;
+}
+.letraMenuacercade h1{
+    text-align: center;
+    font-size: 6rem;
+}
+ol{
+    
+        font-size: 2rem;
+        list-style-type: decimal;
+    }
+    .letraMenuacercade{
+        font-size: 5rem;
+    }
+
+/*CONTACTO*/
+.tituloContacto{
+    text-align:center;
+    color: cyan;
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-items:center;
+    align-items:center;
+    text-align: center;
+    justify-content:space-around;
+    color: rgb(102, 70, 37);
+    width: 700px;
+    
+}
+.formularioCaja{
+    display: flex;
+    text-align: center;
+    color: green;
+    
+}
+
+.menuContacto{
+    text-align: justify;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    margin-right: 50px;
+    width: 200px;
+    padding: 10px 30px 50px 10px;
+
+}
+.botonContacto{
+    background-color: crimson;
+    font-size: 6rem;
+
+
+
+}
+
+/*COMO COMPRAR*/
+
+.titulo{
+    text-align: center;
+}
+.menuComprar p{
+    text-align: center;
+}
+.menuComprar{display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+@media screen and(max-width: 768px)
+
+{
+    .gridBody{
+        grid-template-columns:repeat( 4, 1fr)
+    }
+    body{
+        border: 8px solid purple;
+        background-color: green;
+    }
+
+
+
+
+}
+
+
+
+@media screen and (max-width: 440px)
+{
+.gridBody{    
+    grid-template-columns: 1fr;
+}
+
+body{
+    border: 4px solid black;
+    background-color: red;
+}
+
+}
+
+.logoPrincipal{
+    animation-name: logoAnimado;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: initial;
+    width: 300px;
+}
+@keyframes logoAnimado {
+    0% {
+    opacity: 0;
+    transform: translateX(-100px);
+    }
+    20%,80% {
+    opacity: 1;
+    transform: translateX(0);
+    }
+    100% {
+    opacity: 0;
+    transform: translateX(100px);}
+}
+
+
+
+.carrouselTam{
+    height: 200px;
+    padding: 460px;
+
+}
+.imgProduc{
+
+width: 450px;
+
+
+}
